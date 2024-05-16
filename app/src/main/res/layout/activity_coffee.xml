@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoffeeActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="342dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <CheckBox
+            android:onClick="addIns"
+            android:id="@+id/checkBoxMocha"
+            android:layout_width="111dp"
+            android:layout_height="53dp"
+            android:text="@string/mocha" />
+
+        <CheckBox
+            android:onClick="addIns"
+            android:id="@+id/checkBoxCaramel"
+            android:layout_width="111dp"
+            android:layout_height="53dp"
+            android:text="@string/caramel" />
+
+        <CheckBox
+            android:onClick="addIns"
+            android:id="@+id/checkBoxSC"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:text="@string/sweet_cream" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_coffee">
+
+
+        <RadioButton
+            android:id="@+id/shortR"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/shortcoffee" />
+
+        <RadioButton
+            android:id="@+id/tallR"
+            android:layout_width="89dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/tall" />
+
+        <RadioButton
+            android:id="@+id/ventiR"
+            android:layout_width="110dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="@string/venti"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+        <RadioButton
+            android:id="@+id/grandeR"
+            android:layout_width="105dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="@string/grande"
+            tools:ignore="TouchTargetSizeCheck"/>
+    </RadioGroup>
+
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:onClick="addCoffee"
+            android:text="@string/add_to_order"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <ImageView
+        android:id="@+id/imageView_coffee"
+        android:layout_width="233dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coffee" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="271dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <CheckBox
+            android:onClick="addIns"
+            android:id="@+id/checkBoxFV"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/french_vanilla"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+        <CheckBox
+            android:onClick="addIns"
+            android:id="@+id/checkBoxIC"
+            android:layout_width="127dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:text="@string/irish_cream"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <Spinner
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:id="@+id/coffeeQuantSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            android:layout_marginTop="44dp"
+            app:layout_constraintHorizontal_bias="0.498"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

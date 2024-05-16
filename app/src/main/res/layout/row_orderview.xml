@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowOrderLayout"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="126dp">
+
+            <Button
+                    android:onClick="removeItem"
+                    android:text="@string/remove"
+                    android:layout_width="100dp"
+                    android:layout_height="39dp"
+                    android:id="@+id/b_itemRemove"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintVertical_bias="0.448"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                    android:text="234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_ItemName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.149"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="176dp" />
+
+            <TextView
+                    android:id="@+id/tv_itemDetails"
+                    android:layout_width="210dp"
+                    android:layout_height="76dp"
+                    app:layout_constraintEnd_toStartOf="@+id/b_itemRemove"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.975"
+                    android:layout_marginTop="44dp" />
+
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_itemPrice"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="44dp"
+                    app:layout_constraintVertical_bias="0.707"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                    android:layout_width="57dp"
+                    android:layout_height="82dp"
+                    tools:srcCompat="@tools:sample/avatars"
+                    android:id="@+id/iv_items"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

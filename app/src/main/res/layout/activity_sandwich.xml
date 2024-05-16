@@ -1,0 +1,189 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SandwichActivity">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup_AddOns"
+        android:layout_width="407dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_addOns">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cheese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:onClick="toggleCheese"
+            android:text="@string/cheese"
+            android:textSize="13sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_lettuce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:onClick="toggleLettuce"
+            android:text="@string/lettuce"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_tomatoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:onClick="toggleTomatoes"
+            android:text="@string/tomatoes"
+            android:textSize="12sp"
+            app:checkedIconVisible="true"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_onions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:onClick="toggleOnions"
+            android:text="@string/onions"
+            android:textSize="13sp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/textView_sandwich_title"
+        android:layout_width="290dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/sandwich_activity_prompt"
+        android:textAlignment="center"
+        android:textColor="@color/rutgers_scarlet"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_sandwich"
+        android:layout_width="313dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_sandwich_title"
+        android:src="@drawable/sandwich_pic"
+        android:scaleType="fitCenter"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView_addOns"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/add_ons"
+        android:textAlignment="center"
+        android:textColor="@color/rutgers_scarlet"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_sandwich" />
+
+    <Spinner
+        android:id="@+id/spinner_bread"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_bread" />
+
+    <TextView
+        android:id="@+id/textView_bread"
+        android:layout_width="125dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/bread"
+        android:textAlignment="center"
+        android:textColor="@color/rutgers_scarlet"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup_AddOns" />
+
+    <TextView
+        android:id="@+id/textView_protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/protein"
+        android:textAlignment="center"
+        android:textColor="@color/rutgers_scarlet"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_bread" />
+
+    <Spinner
+        android:id="@+id/spinner_protein"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_protein" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="319dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_protein">
+
+        <TextView
+            android:id="@+id/textView_sandwich_prompt_price"
+            android:layout_width="124dp"
+            android:layout_height="34dp"
+            android:fontFamily="@font/croissant_one"
+            android:text="@string/total_price"
+            android:textAlignment="center"
+            android:textColor="@color/rutgers_scarlet"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView_sandwich_price"
+            android:layout_width="193dp"
+            android:layout_height="26dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="addSandwich"
+        android:id="@+id/button_sandwich"
+        android:layout_width="166dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/add_to_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
