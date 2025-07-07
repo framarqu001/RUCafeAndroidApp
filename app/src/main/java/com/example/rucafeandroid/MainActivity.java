@@ -3,6 +3,7 @@ package com.example.rucafeandroid;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view current view
      */
     public void showCoffee (View view) {
+        Toast.makeText(this, "woah ok im doing something now", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, CoffeeActivity.class);
         startActivity(intent);
     }
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view current view
      */
     public void showDonut (View view) {
+        Toast.makeText(this, "woah ok im doing something now", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DonutActivity.class);
         startActivity(intent);
     }
@@ -75,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view current view
      */
     public void showSandwich (View view) {
+        Toast.makeText(this, "woah ok im doing something now", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, SandwichActivity.class);
         startActivity(intent);
     }
@@ -85,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view current view
      */
     public void showCurrentOrder (View view) {
+        Toast.makeText(this, "woah ok im doing something now", Toast.LENGTH_SHORT).show();
         if (currentOrder.isEmpty()) {
             AlertDialog.Builder alert = new AlertDialog.Builder(view.getContext());
             alert.setTitle("No items in order");
@@ -104,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view current view
      */
     public void showAllOrders(View view) {
+        Toast.makeText(this, "woah ok im doing something now", Toast.LENGTH_SHORT).show();
         if(orderList.isEmpty()){
             AlertDialog.Builder alert = new AlertDialog.Builder(view.getContext());
             alert.setTitle("No orders placed");
